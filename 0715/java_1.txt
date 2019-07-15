@@ -1,0 +1,83 @@
+primitive type
+-> 숫자형 : byte, short, int, long      float, double
+-> 문자형 : char
+-> 논리형 : boolean (non int)
+
+reference type (object type) : 포인터 4byte
+
+정수<실수
+
+method : byte code, literal pool
+heap : object
+stack : method
+
+묵시적 형변환 : up-casting, 자동으로 수행됨
+
+명시적 형변환 : down-casting, 직접 형변환 명시, 형변환 연산자 사용
+
+if문
+#조건식1 == true/false 결과, 빈도수 높은걸로
+if(조건식1){
+
+}
+else if(조건식2){
+
+}
+else(조건식3){
+
+}
+
+switch문
+값의 동등 비교, 다중분기에 특화, label
+switch(표현식(byte, short, char, int, string)){
+    case 값1:
+        break;
+    case 값2:
+
+
+    default:
+
+}
+
+for문
+for(초기치; 조건식; 증감치){
+
+}
+
+while문
+while(조건식){
+
+}
+
+do~while문
+do{
+    반복내용
+}
+while(조건식);
+
+break : 반복을 탈출 
+continue : 다음 반복으로 건너뛰기
+가장 가까이 만날 수 있는 제어문
+[label]을 붙여서 제어할 반복문 설정 가능 ex: A:for(){break A}
+
+배열 : 동형집합, 객체, reference type, objective type
+Primitive Type Array
+Reference Type Array
+어디든 선언시에 무조건 heap에 생성(생성시 default 초기화 발생)
+클래스를 설계할때 응집도를 높여야한다
+이중배열시에는 객체가 다른 array객체를 referrence 한다
+크기를 선언할 필요가 없다 (length를 통해 크기 파악)
+변수를 크기로 선언 가능(runtime시에 생성하기 때문)
+
+for each문
+for(원소:배열){
+
+}
+for(int[]a:arr)
+
+
+
+max
+int 길이
+index 첫번째부터 끝까지 검사
+길이 returnb
