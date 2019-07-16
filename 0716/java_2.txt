@@ -1,0 +1,72 @@
+public 내부에 inner class를 선언하여 그 class 내부에서만 사용 가능하도록 짤수 있다
+은닉 목적
+public class A{
+    private class B{
+        
+    }
+}
+
+소스 안에 실행 타임 기입
+/*
+시간 + 메모리사용량
+*/
+class XXX{
+    
+}
+
+comparable : 원소들이 구현(스스로)
+comporator : 비교판단 해주는 비교자(비교 판단을 해주는 helper)
+
+overloading : 다중정의
+
+Arrays.sort : 정렬
+Arrays.fill(배열, 값) : array 값 채우기 (int는 초기 선언시 0)
+
+array 선언시 최대 max 범위 잘 선언하기, 초기부터 배열 사이즈 잘 선언
+
+greedy algorithm은 상황이 적용될 수 있는지 조건을 먼저 살펴보고 적용해야한다
+잘못 접근 시에는 근사 해는 구할 수 있으나 어렵다
+brute force로 풀수는 없다(시간이 오래 걸리기 때문)
+
+입력 데이터가 많을시에는 scanner의 효율이 떨어진다
+buffered reader 사용하기 추천 (시간 단축 30%)
+출력은 모아서 출력하는 방식을
+string buffer, string builder 에 담아두고 나중에 한번에 출력
+
+입력 스트림
+Input Stream{ byte 단위
+    System.out.println
+}
+Reader{ char 단위(2byte)
+
+}
+
+출력 스트림
+Output Stream
+Writer
+
+
+static 변수 선언
+main(){
+
+    test case 입력 받고{
+        입력처리
+        static 변수 초기화
+            입력데이터 출력해보기(상태확인)
+        알고리즘
+            method별로 코드를 구성해야 디버깅시에 도움이 된다
+        
+        결과처리
+    }
+}
+
+sc.next(radix) : 2진수 등을 간단하게 입력이 가능하다
+sc.nextInt() 시에는 개행 전까지 입력을 받는다, deliminator를 유효문자로 인식하지 않는다, 숫자만 인식시에는 문제가 없는데 숫자 스트링 섞어서 읽는 경우에는 오류 발생
+10**<- **앞까지 읽고 뒤에 개행을 버리지 않는다
+20<-
+sc.nextLine(): 개행 문자를 만날때까지 입력을 받는다
+nextInt 다음에 nextLine을 받으면 바로 개행을 만나버리므로 원하고자 하는 입력을 받지 못한다
+sc.next(): 단어를 읽는 느낌, 구분자 단위로 끊는 입력
+
+readline 사용시에는 알고리즘 문제에서는 그냥 예외처리 불필요
+string 단위로 입력을 받은 후에 원하는 데이터형으로 파싱한다
