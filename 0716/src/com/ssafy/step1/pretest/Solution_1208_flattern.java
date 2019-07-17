@@ -5,8 +5,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class Solution_1208 {
+public class Solution_1208_flattern {
 	public static void main(String[] args) throws NumberFormatException, IOException {
+		
+		
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		for(int t=1;t<=10;++t) {
 			int T = Integer.parseInt(in.readLine());
@@ -25,9 +27,7 @@ public class Solution_1208 {
 		    int ans = arr1[99]-arr1[0];
 		    System.out.println("#"+t+" "+ans);
 		    
-		    
-		    
-		    
+
 		}
 
 }

@@ -20,12 +20,9 @@ public class Solution {
     		arr = new int [1000];
     		arr2 = new int [101];
     		for(int i=0; i<1000; i++) {
-            	arr[i]=scan.nextInt();
+				arr[i]=scan.nextInt();
+				arr2[arr[i]]+=1;
             }
-    			
-    		for(int i=0; i<1000; i++) {
-    			arr2[arr[i]]+=1;
-    		}
     		for(int i=0; i<101; i++) {
     			if(arr2[i]>=max) {
     				max=arr2[i];
