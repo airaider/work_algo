@@ -1,0 +1,132 @@
+parseInt{
+    static int stoi(String s) { return Integer.parseInt(s);}
+    T = stoi(br.readLine());
+}
+
+해당index에 해당하는 char return{
+    string.charAt(i)
+}
+
+scanner char{
+    map[i][j] = sc.next().charAt(0);
+}
+
+char to int{
+    s.charAt(i) - '0';
+    int robot = map[i][j] - 'A';
+}
+
+buffer 읽기{
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+}
+
+StringTokenizer{
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    StringTokenizer st = new StringTokenizer(br.readLine());
+    N = Integer.parseInt(st.nextToken());
+    M = Integer.parseInt(st.nextToken());
+
+    st = new StringTokenizer(br.readLine());
+    int x = Integer.parseInt(st.nextToken());
+    int y = Integer.parseInt(st.nextToken());
+
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    StringTokenizer tk = new StringTokenizer(br.readLine());
+    while(tk.hasMoreTokens()){
+        current = Integer.parseInt(tk.nextToken());
+    }
+
+    String datas = br.readLine();
+    String[] tokens = datas.split(" ");
+    for(String token : tokens){
+        System.out.println(token);
+    }
+
+}
+
+우선순위 큐{
+    오름차순 PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
+    내림차순 PriorityQueue<Integer> pq = new PriorityQueue<Integer>((x, y) -> y - x);
+}
+
+큐에 x,y 좌표 넣기{
+    Queue<Point> q = new LinkedList<Point>();
+}
+
+이중 for문{
+    for (int i = 0; i < N; i++) {
+			for (int j = 0; j < N; j++) {
+				
+			}
+		}
+}
+
+for문 없이 array값 접근{
+    System.out.println(Arrays.toString(a1));
+}
+
+map 출력{
+    private static void show() {
+		for(int i=0;i<N;i++) {
+			for(int j=0;j<N;j++) {
+				System.out.print(map[i][j]);
+			}
+			System.out.println();
+		}
+		
+	}
+}
+
+Queue 좌표 입력{
+    static Queue<Point> q = new LinkedList<Point>();
+    q.add(new Point(i,j));
+    Point p = q.remove();
+			int x=p.x;
+			int y=p.y;
+
+}
+
+method를 밖으로 빼내는것이 중요
+디버깅에도 용이
+
+삼항연산자{
+    area[i][j] = (sc.next().charAt(0) == 'B')?1:0; // 빌딩이면 1, 공원이면 0
+}
+
+if 조건{
+    if(area[i][j]==0)continue;
+}
+
+이중으로 for문 돌릴거 한번으로 돌리기(규칙 구하기){
+    for(int k=0; k<N; k++){//세로열 B구획 세기
+							bCount += (area[k][j]+area[i][k]);
+						}
+}
+
+디버거
+f5: 타고 들어가기
+f6: 그냥 넘어가기
+f8: 다음 breakpoint까지 진행
+f7: 타고 들어간거 빠지기
+
+
+3
+9 5
+6 2 2
+1 5 1
+0 0 2
+1 0 1
+2 4 2
+11 6
+0 0 2
+1 0 1
+2 4 2
+6 2 2
+1 5 1
+8 3 2
+7 5
+6 2 2
+1 6 1
+0 0 2
+1 0 1
+2 4 2
