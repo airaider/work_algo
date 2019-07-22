@@ -1,0 +1,53 @@
+package array;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class Q3_sol {
+	static int Y,X,N;
+	static int py,px,pn;
+	static int [][] map;
+	public static void main(String[] args) throws FileNotFoundException {
+		System.setIn(new FileInputStream("test3.txt"));
+		Scanner sc = new Scanner(System.in);
+		int T=sc.nextInt();
+		for(int t=1;t<=T;t++) {
+			Y=sc.nextInt();
+			X=sc.nextInt();
+			N=sc.nextInt();
+			
+			map = new int [Y][X];
+			for (int i = 0; i < Y; i++) {
+				for (int j = 0; j < X; j++) {
+					map[i][j]=sc.nextInt();
+				}
+			}
+			for (int i = 0; i < N; i++) {
+				py=sc.nextInt();
+				px=sc.nextInt();
+				pn=sc.nextInt();
+			}
+			int tnum=sc.nextInt();
+			for (int i = 0; i < tnum; i++) {
+				int ty=sc.nextInt();
+				int tx=sc.nextInt();
+				map[ty-1][tx-1]=0;
+			}
+			show();
+			
+		}
+
+
+	}
+	private static void show() {
+		for(int i=0;i<Y;i++) {
+			for(int j=0;j<X;j++) {
+				System.out.printf("%3d",map[i][j]);
+			}
+			System.out.println();
+		}
+		
+	}
+
+}

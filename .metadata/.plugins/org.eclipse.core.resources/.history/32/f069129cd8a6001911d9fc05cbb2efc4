@@ -1,0 +1,44 @@
+package com.ssafy.step1.hello;
+
+import java.util.Scanner;
+
+public class solution2 {
+	private static Scanner scan;
+	private static int max_cal;
+	private static int m;
+	private static int t;
+	private static int[] taste;
+	private static int[] kal;
+	
+	
+	public static void main(String[] args) {
+		scan = new Scanner(System.in);  
+		t=scan.nextInt();
+		for(int k=0;k<t;k++) {
+			m=scan.nextInt();
+			max_cal=scan.nextInt();
+			taste = new int[m];
+			kal = new int[m];
+			for(int i=0;i<m;i++) {
+				taste[i]=scan.nextInt();
+				kal[i]=scan.nextInt();
+			}
+			
+			dfs();
+			
+			
+			
+		}
+		
+		
+	}
+	private static void dfs() {
+		// TODO Auto-generated method stub
+		for(int i=0;i<m;i++) {
+			
+			if(kal[i]<=1000) {
+				
+			}
+		}
+	}
+}

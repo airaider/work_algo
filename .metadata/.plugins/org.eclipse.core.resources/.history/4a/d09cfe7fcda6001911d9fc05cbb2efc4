@@ -1,0 +1,22 @@
+package com.ssafy.step1.hello;
+
+import java.util.Scanner;
+
+public class solution2 {
+	private static Scanner scan;
+	public static void main(String[] args) {
+		int t = scan.nextInt();
+		int m = scan.nextInt();
+		int max_cal = scan.nextInt();
+		int[] taste = new int[m];
+		int[] kal = new int[m];
+		for(int i=0;i<m;i++) {
+			taste[i]=scan.nextInt();
+			kal[i]=scan.nextInt();
+		}
+		System.out.println(taste);
+		System.out.println(kal);
+		
+		
+	}
+}

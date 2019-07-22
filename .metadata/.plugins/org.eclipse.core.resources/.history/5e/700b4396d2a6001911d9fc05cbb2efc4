@@ -1,0 +1,60 @@
+package com.ssafy.step1.hello;
+
+import java.util.Scanner;
+
+public class HelloTest {
+
+	private static Scanner scan;
+
+	public static void main(String[] args) {
+		scan = new Scanner(System.in);  
+		//message = scan.nextLine();   
+		//kilometer = scan.nextInt();   
+		int T;
+		T = scan.nextInt();
+		int m;
+		
+		
+		for(int i=0;i<T;i++) {
+			int N;
+			N = scan.nextInt();
+			int[] arr = new int[N];
+			for(int j=0;j<N;j++) {
+				arr[i] = scan.nextInt();
+				
+			}
+			m=check(arr,N,i+1);
+			System.out.println("#"+(i+1)+" " +m);
+		}
+		
+		
+		
+	}
+
+	private static int check(int[] arr, int n, int t) {
+		// TODO Auto-generated method stub
+		int count=0;
+		int max=0;
+		int temp;
+		for(int i=0;i<n-1;i++) {
+			count=1;
+			temp=arr[i];
+			for(int j=i+1;j<n;j++) {
+				if(arr[j]>=temp) {
+					count+=1;
+					temp=arr[j];
+					System.out.println(count+""+arr[j]);
+				}
+				if (count>max){
+					max=count;
+				}
+			}
+		}
+		
+		return max;
+		
+	}
+
+	
+
+}

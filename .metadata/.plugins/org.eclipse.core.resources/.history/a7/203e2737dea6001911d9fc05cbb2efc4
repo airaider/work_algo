@@ -1,0 +1,57 @@
+package com.ssafy.step1.hello;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class solution2 {
+	private static Scanner scan;
+	private static int max_cal;
+	private static int m;
+	private static int t;
+	private static int[] taste;
+	private static int[] kal;
+	private static boolean[] visited;
+	
+	
+	public static void main(String[] args) {
+		scan = new Scanner(System.in);  
+		t=scan.nextInt();
+		for(int k=0;k<t;k++) {
+			m=scan.nextInt();
+			max_cal=scan.nextInt();
+			taste = new int[m];
+			kal = new int[m];
+			for(int i=0;i<m;i++) {
+				taste[i]=scan.nextInt();
+				kal[i]=scan.nextInt();
+			}
+			visited=new boolean[m];
+			Arrays.fill(visited,false);
+			int cal = 0;
+			dfs(0,cal,0);
+			System.out.println(max_cal);
+			
+			
+		}
+		
+		
+	}
+	private static void dfs(int c, int cal, int happy) {
+		if(cal<=1000) {
+			System.out.println(max_cal);
+			if(happy>max_cal) {
+				max_cal=happy;
+			}
+		}
+		else if(cal>1000) {
+			return;
+		}
+		for(int i=c;i<m;i++) {
+			cal+=kal[c];
+			happy+=taste[c];
+			dfs(c+1,cal,happy);
+		}
+	}
+	
+	
+}

@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution",
+            "request": "launch",
+            "mainClass": "Solution",
+            "projectName": "0715"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution1",
+            "request": "launch",
+            "mainClass": "Solution1",
+            "projectName": "0715"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - solution2",
+            "request": "launch",
+            "mainClass": "com.ssafy.step1.hello.solution2",
+            "projectName": "0715"
+        }
+    ]
+}

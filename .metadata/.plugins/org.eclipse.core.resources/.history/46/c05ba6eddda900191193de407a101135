@@ -1,0 +1,15 @@
+package array;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class Q1_sol {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		System.setIn(new FileInputStream("test1.txt"));
+		Scanner sc = new Scanner(System.in);
+
+	}
+
+}

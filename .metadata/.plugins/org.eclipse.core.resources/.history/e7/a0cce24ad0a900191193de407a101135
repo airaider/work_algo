@@ -1,0 +1,19 @@
+package array;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class robot_sol {
+	
+	
+	
+	public static void main(String[] args) throws FileNotFoundException{
+		System.setIn(new FileInputStream("input1.txt"));
+		Scanner sc = new Scanner(System.in);
+	}
+	
+	
+}
+
+

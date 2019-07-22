@@ -1,0 +1,30 @@
+package array;
+
+public class gravity {
+	static int[][] map;
+	public static void main(String[] args) {
+		map = new int [9][9];
+		int[] a = {7,4,2,0,0,6,0,7,0};
+		
+		for (int i = 0; i < a.length; i++) {
+			if(a[i]!=0) {
+				for (int j = a[i]; j >= 0; j--) {
+					map[i][j]=i;
+				}
+			}
+		}
+		show();
+		
+	}
+	
+	private static void show() {
+		for(int i=0;i<9;i++) {
+			for(int j=0;j<9;j++) {
+				System.out.printf("%2d",map[i][j]);
+			}
+			System.out.println();
+		}
+		
+	}
+	
+}

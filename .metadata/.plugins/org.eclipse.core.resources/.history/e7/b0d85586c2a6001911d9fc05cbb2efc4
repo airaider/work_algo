@@ -1,0 +1,25 @@
+package com.ssafy.step1.hello;
+
+import java.util.Scanner;
+
+public class HelloTest {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);  
+		//message = scan.nextLine();   
+		//kilometer = scan.nextInt();   
+		int kilo;
+		kilo = scan.nextInt();
+		int result = (int)(10.5/3);
+		System.out.println(result);
+		int[] arr = new int[10];
+		
+		for(int i=0;i<10;i++) {
+			int sum;
+			System.out.println(arr.length);
+		}
+		
+		
+	}
+
+}
