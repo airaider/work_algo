@@ -1,0 +1,27 @@
+package array;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class ladder1 {
+	static int[][] map;
+	public static void main(String[] args) throws FileNotFoundException {
+		System.setIn(new FileInputStream("ladder_input.txt"));
+		Scanner sc = new Scanner(System.in);
+		for(int tc=1;tc<=10;tc++) {
+			int T=sc.nextInt();
+			map = new int[100][100];
+			for (int i = 0; i < 100; i++) {
+				for (int j = 0; j < 100; j++) {
+					map[i][j]=sc.nextInt();
+				}
+			}
+			
+		}
+		
+		
+
+	}
+
+}

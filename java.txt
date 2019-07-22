@@ -110,6 +110,18 @@ f8: 다음 breakpoint까지 진행
 f7: 타고 들어간거 빠지기
 
 
+if문 break로 탈출시{
+    if(k<s): Answer
+    else 원래대로 출력
+    이럴 때는 for문 안에 지역변수로 선언하면 안된다
+}
+
+min,max value{
+    min = Integer.MAX_VALUE;
+    max = Integer.MIN_VALUE;
+}
+
+
 3
 9 5
 6 2 2

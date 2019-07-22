@@ -1,0 +1,4 @@
+counting sort
+counts 배열을 우선적으로 생성
+누적 집계 array 생성
+누적 counting을 활용해서 원소 자기자리 찾아주기
