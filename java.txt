@@ -121,6 +121,18 @@ min,max value{
     max = Integer.MIN_VALUE;
 }
 
+static ArrayList<Dot> chicken;
+class Dot {
+    int x;
+    int y;
+ 
+    Dot(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+}
+
+
 
 3
 9 5

@@ -9,18 +9,18 @@ public class binary {
 		Arrays.sort(arr);
 		System.out.println(Arrays.toString(arr));
 		
-		binary(0,(arr.length)-1,4);
-	
+		binary(0,(arr.length),95);
+		System.out.println(Arrays.binarySearch(arr, 4));
 	}
 
 	private static void binary(int s, int e, int k) {
 		int i = (s+e)/2;
 		if(arr[i]>k) {
-			binary(s,i,k);
+			binary(s,i-1,k);
 			return;
 		}
 		if(arr[i]<k) {
-			binary(i,e,k);
+			binary(i+1,e,k);
 			return;
 		}
 		if(arr[i]==k) {
