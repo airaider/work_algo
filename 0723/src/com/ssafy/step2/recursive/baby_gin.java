@@ -11,7 +11,7 @@ public class baby_gin {
 		for (int i = 0; i < st.length(); i++) {
 			input[i]=st.charAt(i)-'0';
 		}
-		perm(input,0);
+		perm(input,0); 
 		System.out.println("NOT BABY GIN");
 
 	}
@@ -48,6 +48,9 @@ public class baby_gin {
 	    		if(arr[1]+1==arr[2]) {
 	    			tri++;
 	    		}
+	    	}
+	    	if(tri==0) {
+	    		return false;
 	    	}
 	    	if(arr[3]==arr[4]) {
 	    		if(arr[4]==arr[5]) {

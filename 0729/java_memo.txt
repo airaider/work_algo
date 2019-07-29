@@ -1,0 +1,64 @@
+&
+1   1   0   0
+1   0   1   0
+-------------
+1   0   0   0
+
+|
+1   0   1   0
+0   1   1   0
+-------------
+1   1   1   0
+
+^
+0   1   1   0
+1   0   1   0
+-------------
+1   1   0   0
+
+~
+1   0
+-----
+0   1
+
+<<
+0으로 오른쪽 영역
+
+>>
+부호 bit로 왼쪽 영역
+
+>>>
+0으로 왼쪽 영역
+
+해당 bit index 값 확인
+&
+확인 후에 해당 bit index만 변경
+|
+원하는 위치를 비교한 비교값 생성
+<<
+
+32bit 짜리 
+if((flag & 1<<i)==0) { // i가 기존순열안에서 사용되고 있지 않으면
+    numbers[index]=i;
+    permutation(index+1, flag|1<<i);
+}
+
+BabyGin
+720짜리 index 순열을 미리 만들어 놓고 각 test case에서 babygin이 있는지 본다
+
+String s1 = "abc"
+String s2 = new String("abc")
+String s3 = "abc"
+
+s1 == s2 false
+s1 == s3 true
+
+string은 하나의 literal pool에 관리해서 해당 string의 reference 주소를 넘겨준다
+new의 경우에는 heap에 객체를 만들고 해당 객체의 reference 주소를 넘겨준다
+내용 비교를 올바르게 할려면 string.equals()을 사용해야한다
+
+Integer i = 10;
+          = new Integer(10);
+숫자 10을 가지고 있는 객체의 reference가 들어간다
+int k = i;
+        i.intValue();

@@ -16,7 +16,6 @@ public class hanoi {
 			hanoi1(N,1,2,3);
 		}
 		else hanoi(N,1,2,3);
-		
 		bw.flush();
 		bw.close();
 	}
