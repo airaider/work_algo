@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.util.Scanner;
 
-public class hanoi {
+public class HW2_Hanoi_홍기환 {
 	static BufferedWriter bw;
 	public static void main(String[] args) throws IOException {
 		Scanner br = new Scanner(System.in);
