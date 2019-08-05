@@ -2,7 +2,7 @@ package com.ssafy.hw;
 
 import java.util.Scanner;
 
-public class Main_1175 {
+public class Main_1175_주사위던지기2_홍기환 {
 	static int N,M;
 	static int[] dice;
 	public static void main(String[] args) {
@@ -19,6 +19,9 @@ public class Main_1175 {
 				System.out.println(result);
 				return;
 			}
+			return;
+		}
+		if(sum+(6*(N-index))<M){
 			return;
 		}
 		

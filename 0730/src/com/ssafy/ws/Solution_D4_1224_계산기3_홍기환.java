@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class Solution {
+public class Solution_D4_1224_계산기3_홍기환 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -17,9 +17,20 @@ public class Solution {
 			for(int i=0;i<N;i++) {
 				char c = input.charAt(i);
 				switch (c) {
-				case '+':
+				case '(':
+					st.push(c);
+					break;
+				case ')':
 					if(!st.isEmpty()) {
-						while(!st.isEmpty()) {
+						while(st.peek()!='(') {
+							line.add(st.pop());
+						}
+						st.pop();
+					}
+					break;
+				case '+':
+					if(!st.isEmpty() ) {
+						while(!st.isEmpty()&& st.peek()!='(') {
 							line.add(st.pop());
 						}
 						st.push(c);
@@ -38,13 +49,18 @@ public class Solution {
 				}
 			}
 			while(!st.isEmpty()) {
-				line.add(st.pop());
+				if(st.peek()!='(') {
+					line.add(st.pop());
+				}
+				else st.pop();
+		
 			}
 			Stack<Integer> st1 = new Stack<Integer>();
 			
 			int num1=0;
 			int num2=0;
-			for(int i=0;i<N;i++) {
+			int k =line.size();
+			for(int i=0;i<k;i++) {
 				char testCh = line.get(i);
 				if(testCh=='+' || testCh=='*'){
 	                num2 = st1.pop();
