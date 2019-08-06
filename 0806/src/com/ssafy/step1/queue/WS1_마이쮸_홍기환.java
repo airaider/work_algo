@@ -1,4 +1,4 @@
-package com.ssafy.step2.queue;
+package com.ssafy.step1.queue;
 
 import java.awt.Point;
 import java.util.LinkedList;

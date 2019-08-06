@@ -1,6 +1,7 @@
 codemix.cleanup.bindings=true
 codemix.fixed.editors=true
 codemix.livechat.feedback=1564364460472
+codemix.livechat.feedback.displayed=true
 codemix.showed.view=true
 codemix.showed.welcome=true
 codemix.view.first.close=false
