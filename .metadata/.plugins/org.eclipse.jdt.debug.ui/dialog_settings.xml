@@ -4,4 +4,10 @@
 		<item value="1" key="conditionHistoryEntryCount"/>
 		<item value="i==4 &amp;&amp; j==3" key="conditionHistoryEntry_0"/>
 	</section>
+	<section name="org.eclipse.jdt.internal.debug.ui.ExpressionInformationControlCreator$ExpressionInformationControl">
+		<item value="200" key="SashWeightTree"/>
+		<item value="200" key="SashWeightDetails"/>
+		<item value="614" key="WIDTH"/>
+		<item value="194" key="HEIGHT"/>
+	</section>
 </section>

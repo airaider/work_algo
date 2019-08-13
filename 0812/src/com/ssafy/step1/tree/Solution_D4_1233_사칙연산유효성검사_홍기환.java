@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution {
+public class Solution_D4_1233_사칙연산유효성검사_홍기환 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = null;
@@ -23,8 +23,6 @@ public class Solution {
 					} catch (Exception e) {
 						ans=0;
 					}
-					
-					
 				}
 			}
 			System.out.println("#"+t+" "+ans);
