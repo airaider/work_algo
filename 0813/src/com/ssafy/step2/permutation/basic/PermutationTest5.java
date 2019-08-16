@@ -30,7 +30,7 @@ public class PermutationTest5 {
 		for (int i = 1; i <= N; i++) {
 			// 선택지를 사용할 수 있는지 기존수들과 중복체크
 			if((flag & 1<<i)==0) { // i가 기존순열안에서 사용되고 있지 않으면
-				numbers[index]=i;
+				numbers	[index]=i;
 				permutation(index+1, flag|1<<i);
 			}
 		}
