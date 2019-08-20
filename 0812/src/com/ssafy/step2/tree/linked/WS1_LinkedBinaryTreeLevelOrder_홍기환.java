@@ -3,7 +3,7 @@ package com.ssafy.step2.tree.linked;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class LinkedBinaryTree {
+public class WS1_LinkedbinaryTreeLevelOrder_홍기환 {
 	
 	private TreeNode root;
 	private int size;

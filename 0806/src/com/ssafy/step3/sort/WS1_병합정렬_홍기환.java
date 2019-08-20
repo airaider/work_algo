@@ -2,7 +2,7 @@ package com.ssafy.step3.sort;
 
 import java.util.Arrays;
 
-public class MergeSortTest {
+public class WS1_병합정렬_홍기환 {
 	
 	public static void mergeSort(int[] arr) {
         sort(arr, 0, arr.length);
