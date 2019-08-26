@@ -8,8 +8,6 @@ import java.util.Queue;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
-import com.ssafy.step2.graph.AdjacentMatrix.Node;
-
 public class HW {
 	static class Node{
 		int vertix;
@@ -29,14 +27,12 @@ public class HW {
 	static Node[] adjList;
 	static int cnt=0;
 	static int ans=0;
-	static boolean[] visit;
-	static Queue<Integer> q;
+	static Stack<Integer> st;
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		N=Integer.parseInt(br.readLine());
 		adjList = new Node[N];
-		q = new LinkedList<Integer>();
-		visit = new boolean[N];
+		st = new Stack<Integer>();
 		V=Integer.parseInt(br.readLine());
 		for (int i = 0; i < V; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
@@ -47,23 +43,29 @@ public class HW {
 		}
 		bfs(0);
 	}
-	private static void bfs(int current) {
-		q.add(current);
-		int cnt=0;
+	private static void bfs(int start) {
+		Queue<Integer> q = new LinkedList<Integer>();
+		boolean[] visit = new boolean[N];
+		int level=1;
+		visit[start]=true;
+		q.add(start);
 		while(!q.isEmpty()) {
-			int top = q.remove();
-			if(!visit[top]) {
-				visit[top]=true;
-				cnt++;
-				System.out.print((char)(top+'A')+" ");
-				for(Node curFriend = adjList[top];curFriend != null;curFriend=curFriend.next) {
-//					st.push(curFriend.vertix);
+			int size = q.size();
+			System.out.println("level:"+(level++));
+			for (int i = 0; i < size; i++) {
+				int f = q.remove();
+				System.out.print((char)(f+'A')+ "  ");
+				for(Node friend = adjList[f];friend != null;friend=friend.next) {
+					if(!visit[friend.vertix]) {
+						visit[friend.vertix]=true;
+						q.add(friend.vertix);
+					}
 				}
 			}
+			System.out.println();
+			
 		}
-		System.out.println();
-		System.out.println(cnt);
-		
 	}
+	
 
 }
