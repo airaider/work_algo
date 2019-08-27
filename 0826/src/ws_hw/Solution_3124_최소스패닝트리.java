@@ -1,4 +1,4 @@
-package com.ssafy.step2.graph.disjointset;
+package ws_hw;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,19 +18,19 @@ public class Solution_3124_최소스패닝트리 {
 			E = Integer.parseInt(st.nextToken());
 			parents = new int[V+1];
 			Arrays.fill(parents, -1);
-			info[] edge = new info[E];
+			child[] edge = new child[E];
 			for (int i = 0; i < E; i++) {
 				st = new StringTokenizer(br.readLine());
 				int v = Integer.parseInt(st.nextToken());
 				int e = Integer.parseInt(st.nextToken());
 				int w = Integer.parseInt(st.nextToken());
 				
-				edge[i] = new info(v,e,w);
+				edge[i] = new child(v,e,w);
 			}
 			Arrays.sort(edge);
 			int cnt=0;
 			long ans=0;
-			for (info info : edge) {
+			for (child info : edge) {
 				if(union(info.v, info.e)) {
 					cnt++;
 					ans+=info.w;
@@ -62,21 +62,20 @@ public class Solution_3124_최소스패닝트리 {
 
 }
 
-class info implements Comparable<info>{
+class child implements Comparable<child>{
 	int v;
 	int e;
 	int w;
 	
-	info(int v, int e, int w){
+	child(int v, int e, int w){
 		this.e=e;
 		this.v=v;
 		this.w=w;
 	}
 
 	@Override
-	public int compareTo(info o) {
-		int a = this.w-o.w;
-		return a;
+	public int compareTo(child o) {
+		return Integer.compare(this.w, o.w);
 	}
 	
 	
