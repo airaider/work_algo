@@ -37,6 +37,7 @@ public class Dijkstra {
 			Vertex current = q.poll();
 			if(visited[current.vertex]) continue;
 			visited[current.vertex] = true;
+			if(current.vertex == end) break;
 			for (int j = 0; j < N; j++) {
 				if(!visited[j]  // 방문하지 않은 j 정점
 						&& adjMatrix[current.vertex][j]!=0 // current와 인접해 있는 j정점
