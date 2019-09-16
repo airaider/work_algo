@@ -35,10 +35,9 @@ public class DisjointSetTest {
 	}
 
 	private static boolean union(int a, int b) {
-		//2. find set : 자신이 속한 집합 찾기
 		int aRoot = find(a);
 		int bRoot = find(b);
-		if(aRoot != bRoot) { //3. union set : 두 노드의 집합이 다르면 합치기
+		if(aRoot != bRoot) { 
 			parents[bRoot] = aRoot;
 			return true;
 		}
@@ -46,9 +45,7 @@ public class DisjointSetTest {
 	}
 
 	private static int find(int a) {
-		if(parents[a]<0) return a;	// 루트노드이면 자신의 번호 리턴
-		// 루트노드가 아니면 부모노드 따라가서 루트노드 알아온다
-		// path compression : 리턴받은 루트노드의 값으로 자신의 부모로 갱신
+		if(parents[a]<0) return a;	
 		return parents[a] = find(parents[a]);	
 	}
 
