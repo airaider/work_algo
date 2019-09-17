@@ -8,11 +8,6 @@ public class Ex3_MoneyChange {
 		Scanner sc = new Scanner(System.in);
 		int N = sc.nextInt();
 		int D[] = new int[N+1];
-		if(N<=1) {
-			System.out.println(1);
-			return;
-		}
-		D[0]=0;
 		for (int i = 1; i <= N; i++) {
 			if(i<4) {
 				D[i]=D[i-1]+1;
