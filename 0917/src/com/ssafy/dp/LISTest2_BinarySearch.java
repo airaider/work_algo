@@ -16,16 +16,12 @@ public class LISTest2_BinarySearch {
 		}
 		
 		int size = 0;
-		//subSeq[size++]=arr[0]; // 첫번째 원소는 이전 비교원소가 없으므로 무조건 넣고 시작
 
         for (int i=0; i < N; i++) {
-            int temp = Arrays.binarySearch(LIS, 0, size, arr[i]); // 리턴값 : -insertPoint -1
-            temp = Math.abs(temp)-1;//삽입위치
-            LIS[temp] = arr[i];// temp 자리에 값을 update 하면 그 의미는 
-            					  // 0인덱스 위치부터 temp위치까지의 원소 갯수가  temp위치에 저장된 그 값을 마지막으로 하는 LIS 길이가 됨
-            					  // 배열의 원소가 LIS를 이루는 구성요소와는 관계가 없다.
-
-            if (size == temp) {// 삽입위치의 인덱스와 크기가 같으면(결국,마지막이 삽입위치라는 얘기임) 크기 1늘림.
+            int temp = Arrays.binarySearch(LIS, 0, size, arr[i]); 
+            temp = Math.abs(temp)-1;
+            LIS[temp] = arr[i];
+            if (size == temp) {
                 size++;
             }
         }
